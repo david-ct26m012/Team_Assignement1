@@ -1,3 +1,8 @@
+# Branding-Konzept & Design Tokens
+
+**Team B** · David Scheucher, Aissa Mohamad Iyad 
+**Plattform:** CONFZone, die Begleit-App zur FrontendNow 2026
+
 ## Markenkonzept
 
 Wir verstehen die Konferenzseite nicht als Infobroschüre, sondern als persönlichen Begleiter: In wenigen Klicks finden Besucher:innen die Sessions, die zu ihnen passen, und stellen sich ihr eigenes Programm zusammen. Ein frisches, farbstarkes Erscheinungsbild rund um Türkis sorgt für Orientierung statt Reizüberflutung und hebt uns von nüchternen, rein funktionalen Konferenzseiten ab. Klarheit und Wärme statt Datenwüste.
