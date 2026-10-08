@@ -7,9 +7,10 @@
 Wir bauen eine Web-App für die Konferenz FrontendNow. Sie braucht mehrere Seitentypen:
 eine Übersicht, Detailseiten für Sessions und Speaker sowie ein persönliches Dashboard
 „Mein Programm“. Wir brauchen also von Anfang an Routing, auch mit dynamischen URLs wie
-`/sessions/:id`. Unser Team hat bisher mit Vue gearbeitet, aber noch nicht mit einem
-Meta-Framework wie Nuxt. Das Setup muss außerdem die Schritte 2–4 tragen, ohne dass wir
-später alles umbauen müssen.
+`/sessions/:id`. Sessions sollen nach Track, Tag, Level und Speaker filterbar sein. Später
+kommen Offline-Fähigkeit (das Konferenz-WLAN ist unzuverlässig) und ein Dark Mode dazu.
+Unser Team hat bisher mit Vue gearbeitet, aber noch nicht mit einem Meta-Framework wie
+Nuxt. Das Setup muss die Schritte 2–4 tragen, ohne dass wir später alles umbauen müssen.
 
 ## Alternativen
 
@@ -34,7 +35,9 @@ Wir wählen **Vue + Vite + vue-router**.
 - **Nachvollziehbarkeit:** Weil wir Routen selbst festlegen, verstehen wir jeden Schritt
   und können ihn im Team und bei der Präsentation erklären.
 - **Spätere Anforderungen:** Neue Seiten (z. B. weitere Dashboards) fügen wir einfach als
-  zusätzliche Route und View hinzu. Die Struktur aus ADR 01 bleibt dabei gleich.
+  zusätzliche Route und View hinzu. Die Struktur aus ADR 01 bleibt dabei gleich. Für die
+  Offline-Fähigkeit gibt es mit `vite-plugin-pwa` eine fertige Lösung für Vite, und der
+  Dark Mode hängt nur an unseren Design Tokens, nicht am Framework.
 
 ## Konsequenzen
 

@@ -44,8 +44,11 @@ const mySessions = computed(() =>
 **Begründung:** Der Datensatz bleibt die einzige Quelle der Wahrheit. Ändert sich dort z. B.
 ein Raum, zeigt „Mein Programm“ automatisch den neuen Stand. Mit gespeicherten Kopien
 würden veraltete Infos angezeigt. Außerdem bleibt der gespeicherte Wert klein und einfach.
-Volle Objekte wären nur sinnvoll, wenn der Datensatz nicht immer verfügbar wäre (z. B.
-offline mit externer API). Das ist bei uns nicht der Fall.
+Volle Objekte wären nur sinnvoll, wenn der Datensatz offline nicht verfügbar wäre. Da das
+Konferenz-WLAN unzuverlässig ist, muss der Zeitplan offline funktionieren. Weil der
+Datensatz aber Teil des App-Bundles ist, wird er später zusammen mit der App vom Service
+Worker (PWA) gecacht. Die IDs lassen sich also auch offline auflösen, und eine Kopie der
+Objekte im `localStorage` ist nicht nötig.
 
 ### Wann geladen und synchronisiert?
 
