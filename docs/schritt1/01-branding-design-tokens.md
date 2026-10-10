@@ -1,8 +1,10 @@
 # Branding-Konzept & Design Tokens
 
-**Team B** · David Scheucher, Aissa Mohamad Iyad 
-**Plattform:** CONFZone, die Begleit-App zur FrontendNow 2026
+**Team B** · David Scheucher, Aissa Mohamad Iyad  
+**Plattform:** CONFZone, die Begleit-App zur FrontendNow 2026  
 **Git-Hub Link:** https://github.com/david-ct26m012/Team_Assignement1.git
+
+
 
 ## Markenkonzept
 
@@ -56,3 +58,4 @@ Checker):
 | `onPrimaryContainer` auf `primaryContainer` | 7,3 : 1 |
 | `onError` auf `error` | 6,5 : 1 |
 | `outline` auf `surface` (UI-Element, ≥ 3 : 1) | 4,3 : 1 |
+
