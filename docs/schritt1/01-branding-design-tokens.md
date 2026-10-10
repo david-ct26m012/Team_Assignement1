@@ -2,6 +2,7 @@
 
 **Team B** · David Scheucher, Aissa Mohamad Iyad 
 **Plattform:** CONFZone, die Begleit-App zur FrontendNow 2026
+**Git-Hub Link:** https://github.com/david-ct26m012/Team_Assignement1.git
 
 ## Markenkonzept
 
