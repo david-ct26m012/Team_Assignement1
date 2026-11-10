@@ -16,7 +16,7 @@ Personalisierbarkeit. Unsere Entscheidungskriterien:
 
 ## Entscheidungspunkt 1: Session-Übersicht mit Filterung
 
-**Federführung: Person 1 (Scheu)**
+**Federführung: Person 1 (Scheucher)**
 
 ### Kontext
 

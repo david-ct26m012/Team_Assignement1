@@ -6,7 +6,7 @@ defineProps<{
   days: readonly string[]
   levels: readonly string[]
 }>()
-
+  
 const selectedTrack = defineModel<string>('track', { default: '' })
 const selectedDay = defineModel<string>('day', { default: '' })
 const selectedLevel = defineModel<string>('level', { default: '' })

@@ -3,12 +3,68 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      manifest: {
+        name: 'CONFZone – FrontendNow 2026',
+        short_name: 'CONFZone',
+        description: 'Dein persönlicher Konferenzbegleiter für die FrontendNow 2026',
+        theme_color: '#006B5E',
+        background_color: '#F4FBF8',
+        display: 'standalone',
+        start_url: '/',
+        scope: '/',
+        icons: [
+          {
+            src: 'icons/icon-192.svg',
+            sizes: '192x192',
+            type: 'image/svg+xml',
+          },
+          {
+            src: 'icons/icon-512.svg',
+            sizes: '512x512',
+            type: 'image/svg+xml',
+            purpose: 'any maskable',
+          },
+        ],
+      },
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,svg,ico,png,woff2}'],
+        runtimeCaching: [
+          {
+            // index.html — Network First: immer aktuell, Cache als Offline-Fallback
+            urlPattern: ({ request }) => request.mode === 'navigate',
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'html-cache',
+            },
+          },
+          {
+            // JS/CSS Bundles — Cache First: Content-Hash garantiert Aktualität
+            urlPattern: /\.(?:js|css)$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'static-assets',
+            },
+          },
+          {
+            // Icons, Bilder, Fonts — Cache First: unveränderliche Assets
+            urlPattern: /\.(?:svg|ico|png|woff2)$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'media-assets',
+            },
+          },
+        ],
+      },
+    }),
   ],
   resolve: {
     alias: {
