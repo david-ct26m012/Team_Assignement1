@@ -33,10 +33,10 @@ eine Konferenz-App (kein laufender „offener Tab"-Workflow) passend ist.
 
 ## Icons
 
-Zwei SVG-Icons unter `public/icons/`:
+Zwei PNG-Icons unter `public/icons/`:
 
-- `icon-192.svg` — für Home-Screen und App-Liste
-- `icon-512.svg` — für Splash-Screen und maskable-Verwendung
+- `icon-192.png` — für Home-Screen und App-Liste
+- `icon-512.png` — für Splash-Screen und maskable-Verwendung
 
 Beide zeigen das Kürzel **CZ** (CONFZone) in Weiß auf Teal-Hintergrund (`#006B5E`),
 konsistent mit dem primären Branding-Token. Der abgerundete Hintergrund entspricht
