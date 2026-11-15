@@ -40,7 +40,7 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,svg,ico,png,woff2}'],
         runtimeCaching: [
           {
-            // index.html — Network First: immer aktuell, Cache als Offline-Fallback
+            // App Shell und index.html — Network First: immer aktuell, Cache als Offline-Fallback
             urlPattern: ({ request }) => request.mode === 'navigate',
             handler: 'NetworkFirst',
             options: {
@@ -48,7 +48,7 @@ export default defineConfig({
             },
           },
           {
-            // JS/CSS Bundles — Cache First: Content-Hash garantiert Aktualität
+            // Sessions- & Speaker-Daten + App-Logik (JS/CSS-Bundles) — Cache First
             urlPattern: /\.(?:js|css)$/,
             handler: 'CacheFirst',
             options: {

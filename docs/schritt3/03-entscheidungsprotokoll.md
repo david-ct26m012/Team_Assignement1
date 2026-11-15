@@ -6,9 +6,18 @@
 
 ## Kontext
 
+Die Rendering-Strategie-Entscheidungen aus Schritt 2 sind in
+`docs/schritt2/01-rendering-strategie-adr.md` dokumentiert und bilden die
+Grundlage für die Caching-Entscheidungen hier: Sessions, Speaker-Profile und
+Session-Detailseiten wurden als SSG-äquivalent entschieden — die Daten sind
+zur Build-Zeit ins JavaScript-Bundle eingebettet und es gibt keinen API-Fetch
+zur Laufzeit. „Mein Programm” wurde als CSR mit `localStorage` entschieden.
+Diese Rendering-Wahl bestimmt direkt, welche Caching-Strategie pro Datentyp
+sinnvoll ist (siehe Optionen und Entscheidung unten).
+
 Die Konferenz findet auch bei schlechtem WLAN oder im Flugmodus statt. Sessions,
 Speaker und die App müssen nach dem ersten Online-Laden offline erreichbar sein.
-„Mein Programm“ wird im `localStorage` gespeichert.
+„Mein Programm” wird im `localStorage` gespeichert.
 
 ## Optionen
 
